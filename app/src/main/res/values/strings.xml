@@ -1,0 +1,5 @@
+<resources>
+	<string name="app_name">Facebook Recipes</string>
+	<string name="login.error">Imposible iniciar sesion %s</string>
+	<string name="login.cancel.error">Inicio de sesion cancelado</string>
+</resources>
