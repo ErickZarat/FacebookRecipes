@@ -9,6 +9,15 @@
 		app:showAsAction="always" />
 
 	<item
+		android:id="@+id/action_show_all"
+		android:title="@string/menu.action.all"
+		app:showAsAction="never" />
+	<item
+		android:id="@+id/action_show_fav"
+		android:title="@string/menu.action.fav"
+		app:showAsAction="never" />
+
+	<item
 		android:id="@+id/action_logout"
 		android:title="@string/global.menu.action.logout"
 		app:showAsAction="never" />

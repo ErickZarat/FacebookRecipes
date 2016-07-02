@@ -1,7 +1,9 @@
 package org.erickzarat.android.facebookrecipes.recipelist;
 
 import com.raizlabs.android.dbflow.list.FlowCursorList;
+import com.raizlabs.android.dbflow.sql.language.Select;
 import org.erickzarat.android.facebookrecipes.entities.Recipe;
+import org.erickzarat.android.facebookrecipes.entities.Recipe_Table;
 import org.erickzarat.android.facebookrecipes.libs.base.EventBus;
 import org.erickzarat.android.facebookrecipes.recipelist.events.RecipeListEvent;
 
@@ -35,6 +37,12 @@ public class RecipeListRepositoryImpl implements RecipeListRepository {
     public void removeRecipe(Recipe recipe) {
         recipe.delete();
         post(RecipeListEvent.DELETE_EVENT, Arrays.asList(recipe));
+    }
+
+    @Override
+    public void getFavoritesRecipes() {
+        List<Recipe> recipes = new Select().from(Recipe.class).where(Recipe_Table.favorite.is(true)).queryList();
+        post(RecipeListEvent.READ_EVENT, recipes);
     }
 
     private void post(int type, List<Recipe> recipes) {

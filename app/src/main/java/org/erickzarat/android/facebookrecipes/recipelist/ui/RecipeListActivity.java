@@ -69,7 +69,11 @@ public class RecipeListActivity extends AppCompatActivity implements RecipeListV
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.action_main){
             navigateToMainScreen();
-        } else if (item.getItemId() == R.id.action_logout){
+        } else if (item.getItemId() == R.id.action_show_all){
+            presenter.showAll();
+        }else if (item.getItemId() == R.id.action_show_fav){
+            presenter.showFavs();
+        }else if (item.getItemId() == R.id.action_logout){
             logout();
         }
         return super.onOptionsItemSelected(item);

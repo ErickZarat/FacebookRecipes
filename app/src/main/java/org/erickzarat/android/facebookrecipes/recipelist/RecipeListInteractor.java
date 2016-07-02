@@ -5,4 +5,5 @@ package org.erickzarat.android.facebookrecipes.recipelist;
  */
 public interface RecipeListInteractor {
     void execute();
+    void searchFavs();
 }
