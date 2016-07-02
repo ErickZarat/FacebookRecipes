@@ -15,8 +15,7 @@ import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import org.erickzarat.android.facebookrecipes.R;
-import org.erickzarat.android.facebookrecipes.RecipeMainActivity;
-import org.erickzarat.android.facebookrecipes.entities.Recipe;
+import org.erickzarat.android.facebookrecipes.recipemain.ui.RecipeMainActivity;
 
 import java.util.Arrays;
 
